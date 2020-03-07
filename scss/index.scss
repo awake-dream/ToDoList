@@ -1,0 +1,153 @@
+/*工具类*/
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.clearfix::after {
+  /*设置添加的子元素的内容为空*/
+  content: "";
+  /*设置添加的子元素为块级元素*/
+  display: block;
+  /*设置添加的子元素的高度为0*/
+  height: 0;
+  /*设置添加的子元素看不见*/
+  visibility: hidden;
+  /*给添加的子元素设置clear: both;*/
+  clear: both;
+}
+.clearfix {
+  /*兼容IE6*/
+  *zoom: 1;
+}
+@mixin whc() {
+  width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+}
+@mixin down($w, $c) {
+  width: 0;
+  height: 0;
+  border: $w solid transparent;
+  border-top-color: $c;
+  vertical-align: middle;
+}
+@mixin v-position() {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+@mixin h-position() {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+html, body{
+
+  background: #f1f1f1;
+}
+
+/* 头部区域 */
+.header{
+  height: 60px;
+  line-height: 60px;
+  background: #333;
+  .header-in{
+    @include whc();
+    .header-left{
+      color: #ccc;
+      font-size: 40px;
+    }
+    .header-right{
+      input{
+        width: 500px;
+        height: 40px;
+        border: none;
+        outline: none;
+        border-radius: 5px;
+        padding-left: 10px;
+        box-sizing: border-box;
+      }
+    }
+  }
+}
+
+/* 主体区域 */
+.main{
+  padding-top: 20px;
+  .main-in{
+    @include whc();
+    h2{
+      padding: 10px 0 10px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      p{
+        font-size: 30px;
+        color: #333;
+      }
+      span{
+        padding: 0px 5px;
+        background: skyblue;
+        border-radius: 50%;
+        color: #333;
+      }
+    }
+    li{
+      height: 50px;
+      border-radius: 5px;
+      background: skyblue;
+      margin-top: 20px;
+      padding-left: 10px;
+      box-sizing: border-box;
+      .list_box{
+        width: 100%;
+        height: 100%;
+        line-height: 50px;
+        background: #fcfcfc;
+        display: flex;
+        justify-content: space-between;
+         input{
+          width: 20px;
+          height: 20px;
+          border-radius: 5px;
+          outline: none;
+          vertical-align: middle;
+          margin: 0 20px;
+        }
+        a{
+          font-size: 20px;
+          color: #333;
+        }
+      }
+      button{
+        display: inline-block;
+        width: 40px;
+        height: 20px;
+        background: #ddd;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        color: #fff;
+        border-radius: 10px;
+        margin-top: 15px;
+        font-weight: bold;
+        font-size: 16px;
+      }
+    }
+    .down_box{
+      .list_box{
+        background: #ccc;
+      }
+    }
+    .end{
+      padding-top: 10px;
+      text-align: center;
+      font-size: 40px;
+      a{
+        color: #ccc;
+      }
+    }
+  }
+}

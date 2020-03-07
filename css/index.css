@@ -1,0 +1,137 @@
+@charset "UTF-8";
+/*工具类*/
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.clearfix::after {
+  /*设置添加的子元素的内容为空*/
+  content: "";
+  /*设置添加的子元素为块级元素*/
+  display: block;
+  /*设置添加的子元素的高度为0*/
+  height: 0;
+  /*设置添加的子元素看不见*/
+  visibility: hidden;
+  /*给添加的子元素设置clear: both;*/
+  clear: both;
+}
+
+.clearfix {
+  /*兼容IE6*/
+  *zoom: 1;
+}
+
+html, body {
+  background: #f1f1f1;
+}
+
+/* 头部区域 */
+.header {
+  height: 60px;
+  line-height: 60px;
+  background: #333;
+}
+.header .header-in {
+  width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+}
+.header .header-in .header-left {
+  color: #ccc;
+  font-size: 40px;
+}
+.header .header-in .header-right input {
+  width: 500px;
+  height: 40px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  padding-left: 10px;
+  box-sizing: border-box;
+}
+
+/* 主体区域 */
+.main {
+  padding-top: 20px;
+}
+.main .main-in {
+  width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+}
+.main .main-in h2 {
+  padding: 10px 0 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.main .main-in h2 p {
+  font-size: 30px;
+  color: #333;
+}
+.main .main-in h2 span {
+  padding: 0px 5px;
+  background: skyblue;
+  border-radius: 50%;
+  color: #333;
+}
+.main .main-in li {
+  height: 50px;
+  border-radius: 5px;
+  background: skyblue;
+  margin-top: 20px;
+  padding-left: 10px;
+  box-sizing: border-box;
+}
+.main .main-in li .list_box {
+  width: 100%;
+  height: 100%;
+  line-height: 50px;
+  background: #fcfcfc;
+  display: flex;
+  justify-content: space-between;
+}
+.main .main-in li .list_box input {
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+  outline: none;
+  vertical-align: middle;
+  margin: 0 20px;
+}
+.main .main-in li .list_box a {
+  font-size: 20px;
+  color: #333;
+}
+.main .main-in li button {
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+  background: #ddd;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: #fff;
+  border-radius: 10px;
+  margin-top: 15px;
+  font-weight: bold;
+  font-size: 16px;
+}
+.main .main-in .down_box .list_box {
+  background: #ccc;
+}
+.main .main-in .end {
+  padding-top: 10px;
+  text-align: center;
+  font-size: 40px;
+}
+.main .main-in .end a {
+  color: #ccc;
+}
+
+/*# sourceMappingURL=index.css.map */
